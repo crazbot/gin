@@ -636,6 +636,7 @@ func (c *Context) Cookie(name string) (string, error) {
 	return val, nil
 }
 
+// Render ...
 func (c *Context) Render(code int, r render.Render) {
 	c.Status(code)
 
