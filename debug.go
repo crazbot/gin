@@ -48,7 +48,6 @@ func debugPrint(format string, values ...interface{}) {
 
 func debugPrintWARNINGDefault() {
 	debugPrint(`[WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
-
 `)
 }
 
@@ -56,17 +55,14 @@ func debugPrintWARNINGNew() {
 	debugPrint(`[WARNING] Running in "debug" mode. Switch to "release" mode in production.
  - using env:	export GIN_MODE=release
  - using code:	gin.SetMode(gin.ReleaseMode)
-
 `)
 }
 
 func debugPrintWARNINGSetHTMLTemplate() {
 	debugPrint(`[WARNING] Since SetHTMLTemplate() is NOT thread-safe. It should only be called
 at initialization. ie. before any route is registered or the router is listening in a socket:
-
 	router := gin.Default()
 	router.SetHTMLTemplate(template) // << good place
-
 `)
 }
 
